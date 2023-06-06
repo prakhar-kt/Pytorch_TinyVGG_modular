@@ -181,7 +181,7 @@ def train_model(model: torch.nn.Module,
 
         print(f"Epoch: {epoch+1}/{epochs} | Train Loss: {train_loss:.4f} | Train Acc: {train_acc:.4f} | Test Loss: {test_loss:.4f} | Test Acc: {test_acc:.4f}")
 
-        return results
+    return results
     
     
 
