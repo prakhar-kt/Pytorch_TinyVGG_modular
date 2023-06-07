@@ -24,13 +24,16 @@ def save_checkpoint(model: torch.nn.Module,
 
     target_dir_path = Path(target_dir)
 
-    if target_dir_path.is_dir() == False:
-        target_dir_path.mkdir(parents=True, exist_ok=True)
+    if target_dir_path.is_dir():
+        print(f"[INFO] Target directory {target_dir_path} exists.")
+    else:
+        print(f"[INFO] Target directory {target_dir_path} does not exist. Creating it now...")
+    target_dir_path.mkdir(parents=True, exist_ok=True)
 
     
     # Check if model name endswith .pth or .pt
 
-    assert model_name.endswith('.pth') or model_name.endswith('.pt'), 
+    assert model_name.endswith('.pth') or model_name.endswith('.pt') 
 
     # Create model save path
 

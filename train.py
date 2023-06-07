@@ -57,7 +57,7 @@ transform = transforms.Compose(
 
 # create dataloaders using the data_setup
 
-train_dataloader, test_dataloader, class_names = data_setup.create_datalaoders(
+train_dataloader, test_dataloader, class_names = data_setup.create_dataloaders(
                                                         train_dir=train_dir,
                                                         test_dir=test_dir,
                                                         transform=transform,
@@ -93,6 +93,6 @@ results = train_test_steps.train_model(model=model,
 
 utils.save_checkpoint(model=model,
                       target_dir="model_checkpoints",
-                      filename="tiny_vgg.pth")
+                      model_name="tiny_vgg.pth")
 
 

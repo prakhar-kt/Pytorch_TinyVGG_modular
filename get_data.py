@@ -3,7 +3,7 @@ import requests
 import zipfile
 from pathlib import Path
 
-def main():
+def get_data():
 
     data_path = Path('data')
 
@@ -31,8 +31,7 @@ def main():
         os.remove(image_path / "pizza_steak_sushi.zip")
 
 
-if __name__ == '__main__':
-    main()
+
 
 
 

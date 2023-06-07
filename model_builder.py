@@ -65,7 +65,7 @@ class TinyVGG(nn.Module):
 
         )
 
-        def forward(self, x: torch.Tensor):
+    def forward(self, x: torch.Tensor):
 
             x = self.conv1(x)
 
